@@ -1,10 +1,12 @@
 div {
   background-color: hsla(30, 24, 45, 0.8);
+
+  width: 500px;
 }
 
 h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20em;
+    font-size: 2em;
     font-weight: 600;
 
   }
