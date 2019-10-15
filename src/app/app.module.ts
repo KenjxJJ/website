@@ -13,6 +13,7 @@ import { MovieThumbnailComponent } from './movies/movie-thumbnail.component';
   MoviesListComponent,
   MovieThumbnailComponent
   ],
+
   imports: [
     BrowserModule,
     NgbModule

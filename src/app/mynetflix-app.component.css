@@ -1,11 +1,12 @@
-html, body{
-  background-color:navy;
+div {
+  background-color: black;
+  width:auto;
+  height: 750px;
 }
 
 h1 {
     font-family: "Comic Sans", Arial, Helvetica, sans-serif;
     font-size: 2.5em;
-    position: relative;
     text-align: center;
-    color:  rgba(16, 68, 136, 0.295);
+    color: greenyellow;
 }
