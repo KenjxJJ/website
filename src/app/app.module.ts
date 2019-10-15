@@ -1,16 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
+import { MyNetflixAppComponent } from './mynetflix-app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+  MyNetflixAppComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [MyNetflixAppComponent]
 })
 export class AppModule { }
