@@ -5,6 +5,7 @@ import { MyNetflixAppComponent } from './mynetflix-app.component';
 import { MoviesListComponent } from './movies/movies-list.component';
 import { MovieThumbnailComponent } from './movies/movie-thumbnail.component';
 import { NavBarComponent } from './nav/nav-bar.component';
+import { MoviesService } from './movies/shared/movies.service';
 
 
 
@@ -20,7 +21,9 @@ import { NavBarComponent } from './nav/nav-bar.component';
     BrowserModule,
     NgbModule
   ],
-  providers: [],
+  providers: [
+    MoviesService
+  ],
   bootstrap: [MyNetflixAppComponent]
 })
 export class AppModule { }
