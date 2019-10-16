@@ -4,6 +4,7 @@ import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { MyNetflixAppComponent } from './mynetflix-app.component';
 import { MoviesListComponent } from './movies/movies-list.component';
 import { MovieThumbnailComponent } from './movies/movie-thumbnail.component';
+import { NavBarComponent } from './nav/nav-bar.component';
 
 
 
@@ -11,7 +12,8 @@ import { MovieThumbnailComponent } from './movies/movie-thumbnail.component';
   declarations: [
   MyNetflixAppComponent,
   MoviesListComponent,
-  MovieThumbnailComponent
+  MovieThumbnailComponent,
+  NavBarComponent
   ],
 
   imports: [

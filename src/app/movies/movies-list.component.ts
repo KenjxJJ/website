@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'movies-list',
      template: `<div>
-      <h1>Movies List here </h1>
+      <h1>Movies</h1>
      <hr>
      <div class="row">
          <movie-thumbnail *ngFor="let movieList of moviesList"
