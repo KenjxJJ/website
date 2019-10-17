@@ -1,4 +1,6 @@
 import { Component } from "@angular/core";
+import { IMovies } from '../movies/shared/movies.model';
+import { MoviesService } from '../movies/shared/movies.service';
 
 @Component({
       selector: 'nav-bar',
@@ -23,5 +25,17 @@ import { Component } from "@angular/core";
       `]})
 
 export class NavBarComponent {
+        searchTerm: string = '';
+        foundMovies: IMovies[] = [];
+
+        constructor(private moviesService: MoviesService) {}
+
+        searchMovies(searchTerm) {
+          this.moviesService.searchMovies(searchTerm).subscribe
+            ( moviesList => {
+                this.foundMovies  = moviesList
+            });
+
+        }
 
 }

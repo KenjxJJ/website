@@ -9,22 +9,29 @@ import { MoviesService } from './movies/shared/movies.service';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
 import { JQ_TOKEN } from './common/jquery.service';
+import { SimpleModalComponent } from './common/simple-modal.component';
+import { ModalTriggerDirective } from './common/modal-trigger.directive';
+import { HttpClientModule } from '@angular/common/http';
 
 
 const jQuery = window['$'];
 
 @NgModule({
   declarations: [
-  MyNetflixAppComponent,
+    MyNetflixAppComponent,
   MoviesListComponent,
   MovieThumbnailComponent,
-  NavBarComponent
+  NavBarComponent,
+  SimpleModalComponent,
+  ModalTriggerDirective
+
   ],
 
   imports: [
     BrowserModule,
     NgbModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   providers: [
     MoviesService,
