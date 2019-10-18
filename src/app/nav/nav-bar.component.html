@@ -25,9 +25,10 @@
             </li>
           </ul>
         </div>
-        <form id="searchForm"  class="navbar-form navbar-right"  >
+        <form id="searchForm" (ngSubmit)='searchMovies(searchTerm)' class="navbar-form
+        navbar-right"  >
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search Movies Here" >
+             <input [(ngModel)]="searchTerm" name="searchTerm" type="text" class="form-control" placeholder="Search Movies Here" />
           </div>
           <button class="btn btn-default" modal-trigger='searchResults'>
             Search
@@ -39,7 +40,7 @@
 
 <simple-modal elementId='searchResults' title="Search Results">
   <div class="list-group">
-    <a class="list-group-item" *ngFor='let movie of foundMovies'>
-    {{movie.title}</a>
+    <a class="list-group-item" *ngFor='let movie of foundMovies' [routerLink]="['/home']">
+    {{movie.title}}</a>
     </div>
 </simple-modal>

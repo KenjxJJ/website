@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule, NgbModalModule} from '@ng-bootstrap/ng-bootstrap';
 import { MyNetflixAppComponent } from './mynetflix-app.component';
 import { MoviesListComponent } from './movies/movies-list.component';
 import { MovieThumbnailComponent } from './movies/movie-thumbnail.component';
@@ -12,9 +12,9 @@ import { JQ_TOKEN } from './common/jquery.service';
 import { SimpleModalComponent } from './common/simple-modal.component';
 import { ModalTriggerDirective } from './common/modal-trigger.directive';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
-
-const jQuery = window['$'];
+let jQuery = window['$'];
 
 @NgModule({
   declarations: [
@@ -29,9 +29,11 @@ const jQuery = window['$'];
 
   imports: [
     BrowserModule,
-    NgbModule,
     RouterModule.forRoot(appRoutes),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    NgbModalModule,
+    NgbModule
   ],
   providers: [
     MoviesService,

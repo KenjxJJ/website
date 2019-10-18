@@ -25,16 +25,13 @@ import { MoviesService } from '../movies/shared/movies.service';
       `]})
 
 export class NavBarComponent {
-        searchTerm: string = '';
+        searchTerm : string = '';
         foundMovies: IMovies[] = [];
 
         constructor(private moviesService: MoviesService) {}
 
         searchMovies(searchTerm) {
-          this.moviesService.searchMovies(searchTerm).subscribe
-            ( moviesList => {
-                this.foundMovies  = moviesList
-            });
+          this.foundMovies = this.moviesService.searchMovies(searchTerm);
 
         }
 
