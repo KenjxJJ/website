@@ -1,7 +1,5 @@
 import { Injectable} from '@angular/core';
 import { IMovies } from './movies.model';
-import { of, Observable } from 'rxjs';
-import { catchError } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable()
@@ -9,24 +7,15 @@ export class MoviesService {
 
   constructor(private http: HttpClient) {}
 
-  getMovies():Observable<IMovies[]> {
-      return this.http.get<IMovies[]>('/api/movies')
-        .pipe(catchError(this.handleError<IMovies[]>('getMovies', [])))
+  getMovies() {
+      return moviesList;
     }
 
 
-    searchMovies(searchTerm: string): Observable<IMovies[]> {
-      return this.http.get<IMovies[]>('/api/movies/search?search=' + searchTerm)
-        .pipe(catchError(this.handleError<IMovies[]>('searchMovies')));
-    }
-
-
-    private handleError<T>( operation = 'operation', result?: T) {
-      return (error: any): Observable<T> => {
-        console.error(error);
-        return of(result as T);
+    searchMovies(searchTerm: string) {
+    return moviesList.filter( s => s.title.toLowerCase().
+      indexOf(searchTerm.toLowerCase()) > -1);
       }
-    }
 
 }
 
