@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 
 @Component({
      selector: 'movie-thumbnail',
@@ -7,6 +7,8 @@ import { Component, Input } from '@angular/core';
               <img [src] = " movie?.image?.url" />
                 <h2> Title : {{ movie?.title | uppercase}} </h2>
                <h3> Year of Production : {{ movie?.releaseYear}} </h3>
+               <button class="btn btn-default" name="details-button"
+                   [routerLink]="['/movies', movie.objectId]"> See details</button>
               <hr/>
           </div> `,
      styles: [ `
@@ -31,4 +33,5 @@ import { Component, Input } from '@angular/core';
 export class MovieThumbnailComponent {
   // tslint:disable-next-line: no-input-rename
   @Input(' movieSelection')  movie: any;
+
 }

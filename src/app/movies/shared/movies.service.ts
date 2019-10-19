@@ -11,6 +11,14 @@ export class MoviesService {
       return moviesList;
     }
 
+    getMovie(id: string){
+             return moviesList.find( s => s.objectId === id);
+    }
+
+    getMovieGenre(id: string){
+        return moviesList.filter( s => s.objectId == id).map( s => s.genre);
+    }
+
 
     searchMovies(searchTerm: string) {
     return moviesList.filter( s => s.title.toLowerCase().
