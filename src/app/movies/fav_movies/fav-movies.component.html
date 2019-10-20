@@ -1,0 +1,38 @@
+<div class="container"  *ngIf='this.myFavMoviesList !== []'>
+    <div *ngFor='let favMovie of myFavMoviesList' name='myFavMoviesList'>
+      <div class="row">
+        <div class="col-md-11">
+          <h2 style="font-size: 120%">{{favMovie?.title | uppercase }}</h2>
+          <img [src]="favMovie?.image?.url" [alt]="favMovie?.image?.name"
+          class="movie-image"/>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Release Year:</h4> {{favMovie?.releaseYear}}
+          <h4>Genre:</h4>
+           <ul><li style="list-style-type: none" *ngFor="let genre of genres">{{favMovie?.genre}}</li></ul>
+
+          <h4>Rating : </h4>{{favMovie?.rating}}
+          <h4>Created On: </h4> {{movie?.createdAt}}
+          <h4>Updated On: </h4> {{favMovie?.updateAt}}
+        </div>
+
+     <div class="col-md-6">
+        <h4>Plot</h4>
+        <hr/>
+        {{favMovie?.description}}
+      </div>
+     </div>
+
+     <div class="row">
+       <button class="btn btn-default" (click)="removeFromFav(favMovie.objectId)"
+       [routerLink]="['/home']">Remove From Favourites</button>
+    </div>
+    </div>
+
+</div>
+
+  <p style = "font-size: 150%" *ngIf='this.myFavMoviesList === []'>Sorry there is any favorites movies chosen</p>
+

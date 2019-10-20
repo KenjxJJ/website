@@ -7,20 +7,18 @@ import { MoviesService } from './shared/movies.service';
       <h1>Movies</h1>
      <hr>
      <div class="row">
-         <movie-thumbnail *ngFor="let movie of movies"
-             [movieSelection]="movie"></movie-thumbnail>
-             </div>
-        </div>`,
-     styleUrls: ['./movies-list.component.css']
+        <movie-thumbnail *ngFor="let movie of movies"
+           [movieSelection]="movie"></movie-thumbnail>
+      </div>
+    </div>`,
+   styleUrls: ['./movies-list.component.css']
 })
 
 export class MoviesListComponent implements OnInit {
-     movies: any[];
-    constructor(private moviesService: MoviesService) {
+    movies: any[];
+   constructor(private moviesService: MoviesService) { }
 
-    }
-
-    ngOnInit() {
-         this.movies = this.moviesService.getMovies();
-    }
+   ngOnInit() {
+        this.movies = this.moviesService.getMovies();
+   }
 }
