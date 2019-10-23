@@ -7,13 +7,25 @@ import { FavMovieService } from './fav-movies.service';
 @Component({
       selector: 'myfav',
      templateUrl: './fav-movies.component.html',
-     styles: [`div{
-          background-color: black;
-          color: grey;
-          border: 1px solid white;
-          width: 78%;
+     styles: [`
+          h3, h4{
+            font-size: 130%;
+          }
+        div {
+          background-color: rgb(67,67,67);
+          color: white;
+          width: 100%;
           height: auto;
-     }`]
+     }
+
+     button.btn {
+      background-color: rgba(200, 67, 20, 0.7);
+      color: white;
+      margin: 2px;
+      font-size: 14px;
+      height: 30px;
+
+   }`]
 })
 
 export class FavMoviesComponent implements OnInit {
@@ -21,14 +33,16 @@ export class FavMoviesComponent implements OnInit {
     myFavMoviesList: IMovies[];
     clickedMovie: IMovies;
     id: string;
+    genres: any[][];
 
     constructor(private moviesService: MoviesService, private route: ActivatedRoute
           ,     private favMoviesService: FavMovieService) {}
 
    ngOnInit() {
-       this.clickedMovie = this.moviesService.getMovie(this.route.params['objectId']);
+
        this.id = this.route.params['objectId'];
        this.myFavMoviesList =  this.favMoviesService.showFavMoviesList();
+       this.genres = this.moviesService.getMovieGenre(this.id);
    }
 
    removeFromFav(id) {

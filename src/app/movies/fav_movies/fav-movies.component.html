@@ -1,7 +1,7 @@
 <div class="container"  *ngIf='this.myFavMoviesList !== []'>
     <div *ngFor='let favMovie of myFavMoviesList' name='myFavMoviesList'>
       <div class="row">
-        <div class="col-md-11">
+        <div class="col-md-12">
           <h2 style="font-size: 120%">{{favMovie?.title | uppercase }}</h2>
           <img [src]="favMovie?.image?.url" [alt]="favMovie?.image?.name"
           class="movie-image"/>
@@ -12,15 +12,15 @@
         <div class="col-md-6">
           <h4>Release Year:</h4> {{favMovie?.releaseYear}}
           <h4>Genre:</h4>
-           <ul><li style="list-style-type: none" *ngFor="let genre of genres">{{favMovie?.genre}}</li></ul>
+           <ul><li style="list-style-type: none" *ngFor="let genre of favMovie.genre">{{genre}}</li></ul>
 
           <h4>Rating : </h4>{{favMovie?.rating}}
-          <h4>Created On: </h4> {{movie?.createdAt}}
-          <h4>Updated On: </h4> {{favMovie?.updateAt}}
+          <h4>Created On: </h4> {{favMovie?.createdAt | date: 'y/M/d'}}
+          <h4>Updated On: </h4> {{favMovie?.updatedAt | date : 'y/M/d'}}
         </div>
 
      <div class="col-md-6">
-        <h4>Plot</h4>
+        <h4>Plot:</h4>
         <hr/>
         {{favMovie?.description}}
       </div>
