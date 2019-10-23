@@ -15,10 +15,19 @@ import { MoviesService } from '../movies/shared/movies.service';
               float : left;
                margin-right : 10px;
                color : blue;
-               text-decoration : none;
                text-align: center;
                padding: 15px;
             }
+             a: hover,
+             a: link {
+              text-decoration : none;
+             }
+            li > a.active{
+                  color: #F97924;
+                  text-decoration : none;
+
+            }
+
             form > input {
                 width: 55%;
                 float:left;

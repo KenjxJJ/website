@@ -6,10 +6,12 @@
 
       <ul class="nav navbar-nav col-md-4">
          <li>
-            <a [routerLink]="['/home']">Home</a>
+            <a [routerLink]="['/home']"
+             routerLinkActive ="active">Home</a>
           </li>
           <li class="my_fav">
-           <a [routerLink]="['/myFav']">Favourites</a>
+           <a [routerLink]="['/myFav']"  routerLinkActive ="active"
+           [routerLinkActiveOptions] ="{exact:active}">Favourites</a>
           </li>
       </ul>
       <form id="searchForm" (ngSubmit)='searchMovies(searchTerm)' class="navbar-form
