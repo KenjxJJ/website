@@ -10,21 +10,15 @@ export class  FavMovieService {
   constructor( private moviesService: MoviesService) {}
 
 addFavMovie(id: string) {
-    this.myFavMovie = this.moviesService.getMovie(id);
-    // tslint:disable-next-line: no-use-before-declare
-    myFavMoviesList.push(this.myFavMovie);
-    // tslint:disable-next-line: no-use-before-declare
-    console.log(myFavMoviesList);
-    // tslint:disable-next-line: no-use-before-declare
-    }
+     this.myFavMovie = this.moviesService.getMovie(id);
+     myFavMoviesList.push(this.myFavMovie);
+}
 showFavMoviesList(): IMovies[] {
-        // tslint:disable-next-line: no-use-before-declare
         return myFavMoviesList;
-    }
+}
 
-    removeAFavMovie(id: string): IMovies[]{
-          // tslint:disable-next-line: no-use-before-declare
-          myFavMoviesList = myFavMoviesList.filter(s => s.objectId !== id).map( s => s);
+removeAFavMovie(id: string): IMovies[]{
+       myFavMoviesList = myFavMoviesList.filter(s => s.objectId !== id).map( s => s);
         return myFavMoviesList;
 }
 userHasLiked(id: string): boolean {

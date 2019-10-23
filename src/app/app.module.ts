@@ -18,6 +18,8 @@ import { MovieResolver } from './movies/movie-list.resolver';
 import { FavMoviesComponent } from './movies/fav_movies/fav-movies.component';
 import { FavMovieService } from './movies/fav_movies/fav-movies.service';
 import { LikeMovieComponent } from './movies/like-movie.component';
+import { StorageServiceModule } from 'angular-webstorage-service';
+import { SessionStorageFavouritesService } from './movies/shared/session-storage-favourites.service';
 
 
 const jQuery = window['$'];
@@ -40,7 +42,8 @@ const jQuery = window['$'];
     HttpClientModule,
     FormsModule,
     NgbModalModule,
-    NgbModule
+    NgbModule,
+    StorageServiceModule
   ],
   providers: [
        MoviesService,
@@ -48,7 +51,8 @@ const jQuery = window['$'];
          provide: JQ_TOKEN, useValue: jQuery
         },
         MovieResolver,
-        FavMovieService
+        FavMovieService,
+        SessionStorageFavouritesService
     ],
   bootstrap: [MyNetflixAppComponent]
 })

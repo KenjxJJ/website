@@ -1,6 +1,7 @@
-import { Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IMovies, IMoviesCountFavourite } from './shared/movies.model';
 import { FavMovieService } from './fav_movies/fav-movies.service';
+import { SessionStorageFavouritesService } from './shared/session-storage-favourites.service';
 
 @Component({
      selector: 'movie-thumbnail',
@@ -52,22 +53,28 @@ import { FavMovieService } from './fav_movies/fav-movies.service';
 export class MovieThumbnailComponent {
   // tslint:disable-next-line: no-input-rename
   @Input(' movieSelection')  movie: IMovies;
-  likeCount: IMoviesCountFavourite[] =[];
+  newValue: boolean;
+  newFavList: IMovies[];
 
-  constructor(private favMoviesService: FavMovieService){
+  constructor(private favMoviesService: FavMovieService,
+              private sessionStorageService: SessionStorageFavouritesService) {
  }
 
-    toggleLike(id: string): void {
-      console.log(this.likeCount);
-      if (this.userHasLiked(id)){
-          this.favMoviesService.removeAFavMovie(id);
+
+ toggleLike(id: string): void {
+      if (this.userHasLiked(id)) {
+          this. newFavList = this.favMoviesService.removeAFavMovie(id);
+          console.log(this.newFavList);
           console.log(this.favMoviesService.showFavMoviesList);
+          this.sessionStorageService.clearAnItemFromSessionStorage(id);
+
      } else {
          this.favMoviesService.addFavMovie(id);
+         console.log(this.favMoviesService.showFavMoviesList);
+         this.sessionStorageService.storeOnSessionStorage(id, JSON.stringify(this.userHasLiked(id)));
      }
     }
   userHasLiked(id: string) {
       return this.favMoviesService.userHasLiked(id);
   }
-
 }

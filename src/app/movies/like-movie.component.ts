@@ -1,5 +1,4 @@
-import { Input, Output, Component, EventEmitter} from '@angular/core';
-import { FavMovieService } from './fav_movies/fav-movies.service';
+import { Input, Output, Component, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'movie-like',
@@ -27,12 +26,7 @@ export class LikeMovieComponent {
    @Output() like = new EventEmitter();
    iconColor: string;
 
-   constructor( private favMoviesService:FavMovieService) {
-     
-   }
-
    onClick(): void {
         this.like.emit({});
- }
-
-}
+    }
+  }
