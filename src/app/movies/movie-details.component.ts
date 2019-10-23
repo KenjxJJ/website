@@ -1,7 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { MoviesService } from './shared/movies.service';
 import { IMovies } from './shared/movies.model';
-import {  ActivatedRoute } from '@angular/router';
+import {  ActivatedRoute, Params } from '@angular/router';
 import { FavMovieService } from './fav_movies/fav-movies.service';
 
 @Component({
@@ -56,13 +56,13 @@ export class MovieDetailsComponent implements OnInit {
   id: string;
 
   constructor( private moviesService: MoviesService, private route: ActivatedRoute,
-    private favMoviesService: FavMovieService) {}
+               private favMoviesService: FavMovieService) {}
 
     ngOnInit() {
-      this.movie = this.moviesService.getMovie(this.route.snapshot.params.objectId);
+      this.route.params.forEach( (params: Params) => {
+      this.movie = this.moviesService.getMovie(params['objectId']);
       this.id = this.route.snapshot.params['objectId'];
-
-
+      })
     }
     addToMyFav() {
      this.favMoviesService.addFavMovie(this.id);

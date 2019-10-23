@@ -12,7 +12,7 @@ import { SessionStorageFavouritesService } from './shared/session-storage-favour
                 <h2> Title : {{ movie?.title | uppercase}} </h2>
                <h3> Year of Production : {{ movie?.releaseYear}} </h3>
                <button class="btn btn-default col-md-3" name="details-button"
-                   [routerLink]="['/movies', movie.objectId]" > See details</button>
+                   [routerLink]="['/movie', movie.objectId]" > See details</button>
             </div>
             <movie-like class="col-md-1" (like)='toggleLike(movie.objectId)'
                           [liked]='userHasLiked(movie.objectId)'>

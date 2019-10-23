@@ -27,7 +27,8 @@
 
 <simple-modal elementId='searchResults' title="Search Results">
   <div class="list-group">
-    <a class="list-group-item" *ngFor='let movie of foundMovies' [routerLink]="['/home']">
+    <a class="list-group-item" *ngFor='let movie of foundMovies'
+      [routerLink]="['/movie', movie.objectId]">
     {{movie.title}}</a>
     </div>
 </simple-modal>
