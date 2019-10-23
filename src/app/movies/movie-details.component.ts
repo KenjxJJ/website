@@ -67,4 +67,7 @@ export class MovieDetailsComponent implements OnInit {
     addToMyFav() {
      this.favMoviesService.addFavMovie(this.id);
     }
+    userHasClicked(id){
+      this.favMoviesService.userHasLiked(id);
+    }
 }
