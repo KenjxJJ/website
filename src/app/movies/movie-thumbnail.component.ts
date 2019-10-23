@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IMovies, IMoviesCountFavourite } from './shared/movies.model';
+import { IMovies} from './shared/movies.model';
 import { FavMovieService } from './fav_movies/fav-movies.service';
 import { SessionStorageFavouritesService } from './shared/session-storage-favourites.service';
 
@@ -64,13 +64,10 @@ export class MovieThumbnailComponent {
  toggleLike(id: string): void {
       if (this.userHasLiked(id)) {
           this. newFavList = this.favMoviesService.removeAFavMovie(id);
-          console.log(this.newFavList);
-          console.log(this.favMoviesService.showFavMoviesList);
           this.sessionStorageService.clearAnItemFromSessionStorage(id);
 
      } else {
          this.favMoviesService.addFavMovie(id);
-         console.log(this.favMoviesService.showFavMoviesList);
          this.sessionStorageService.storeOnSessionStorage(id, JSON.stringify(this.userHasLiked(id)));
      }
     }

@@ -26,9 +26,11 @@ this.storage.set(STORAGE_KEY
 console.log(this.storage.get(STORAGE_KEY)
               || 'Session Storage is empty');
 }
-  retriveFromSessionStorage() {
+
+retriveFromSessionStorage() {
              return this.storage.get(STORAGE_KEY);
   }
+
 clearAllSessionStorage() {
        return this.storage.remove(STORAGE_KEY);
 }
@@ -40,15 +42,10 @@ clearAnItemFromSessionStorage(id: string) {
 
   // search an id which to delete and remove through filter method
   newCurrentData = currentData.filter( s =>  s.objectId !== id ).map( s => s);
-
-  console.log(currentData.filter( s => s.objectId !== id).map( s => s));
-
   // insert updated array to session storage
   this.storage.set(STORAGE_KEY
         , newCurrentData);
 
-
-  console.log(this.storage.get(STORAGE_KEY));
     } else {
       console.log('Session Storage is empty');
     }
