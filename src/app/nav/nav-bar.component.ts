@@ -8,18 +8,32 @@ import { MoviesService } from '../movies/shared/movies.service';
       styles: [`
           .navbar-nav{
             flex-direction : unset;
-                     }
-
-             .navbar-nav li {
-                margin-right : 10px;
-              color : green;
+            width: 100%;
             }
+
+            ul li {
+              float : left;
+               margin-right : 10px;
+               color : blue;
+               text-decoration : none;
+               text-align: center;
+               padding: 15px;
+            }
+            form > input {
+                width: 55%;
+                float:left;
+                margin-right: 0px;
+                min-width: 150px;
+            }
+
             button {
                color :white;
                background-color: orange;
                height: 20%;
+               width: 25%;
+               min-width: 80px;
             }
-            : hover {
+            :hover {
                color : blue;
             }
       `]})
