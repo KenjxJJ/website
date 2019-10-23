@@ -20,6 +20,8 @@ import { FavMovieService } from './movies/fav_movies/fav-movies.service';
 import { LikeMovieComponent } from './movies/like-movie.component';
 import { StorageServiceModule } from 'angular-webstorage-service';
 import { SessionStorageFavouritesService } from './movies/shared/session-storage-favourites.service';
+import { Error404Component } from './errors/404-error.component';
+import { MovieRouteActivator } from './movies/movie-route-activator.service';
 
 
 const jQuery = window['$'];
@@ -34,7 +36,8 @@ const jQuery = window['$'];
           ModalTriggerDirective,
          MovieDetailsComponent,
          FavMoviesComponent,
-         LikeMovieComponent
+         LikeMovieComponent,
+         Error404Component
   ],
   imports: [
     BrowserModule,
@@ -52,7 +55,8 @@ const jQuery = window['$'];
         },
         MovieResolver,
         FavMovieService,
-        SessionStorageFavouritesService
+        SessionStorageFavouritesService,
+        MovieRouteActivator
     ],
   bootstrap: [MyNetflixAppComponent]
 })
