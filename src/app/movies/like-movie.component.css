@@ -1,0 +1,25 @@
+.likeWidgetContainer {
+  padding-right:2px;
+}
+.likeWidget {
+   border-radius: 2px;
+}
+
+.likeButton {
+    cursor:pointer;
+    color: whitesmoke;
+    font-size: medium;
+  }
+
+.fa {
+  color: white;
+  margin-left: 23px;
+}
+
+.badge div {
+width: 100%;
+text-align: center;
+font-size: medium;
+color : rgba(179, 90, 17, 0.842);
+
+}

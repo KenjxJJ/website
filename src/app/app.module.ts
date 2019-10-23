@@ -17,9 +17,10 @@ import { MovieDetailsComponent } from './movies/movie-details.component';
 import { MovieResolver } from './movies/movie-list.resolver';
 import { FavMoviesComponent } from './movies/fav_movies/fav-movies.component';
 import { FavMovieService } from './movies/fav_movies/fav-movies.service';
+import { LikeMovieComponent } from './movies/like-movie.component';
 
 
-let jQuery = window['$'];
+const jQuery = window['$'];
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ let jQuery = window['$'];
           SimpleModalComponent,
           ModalTriggerDirective,
          MovieDetailsComponent,
-         FavMoviesComponent
+         FavMoviesComponent,
+         LikeMovieComponent
   ],
   imports: [
     BrowserModule,
