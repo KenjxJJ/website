@@ -7,7 +7,7 @@ import { MoviesService } from './shared/movies.service';
       <h1>Movies</h1>
      <hr>
      <div class="row">
-        <movie-thumbnail *ngFor="let movie of movies"
+        <movie-thumbnail class='row' *ngFor="let movie of movies"
            [movieSelection]="movie"></movie-thumbnail>
       </div>
     </div>`,
