@@ -13,7 +13,7 @@
       <div class="col-md-6">
         <h4>Release Year :</h4> {{movie?.releaseYear}}
         <h4>Genre :</h4>
-         <ul><li style="list-style-type: none" *ngFor="let genre of genres">{{movie?.genre}}</li></ul>
+         <ul><li style="list-style-type: none" *ngFor="let genre of movie.genre">{{genre}}</li></ul>
 
         <h4>Rating : </h4>{{movie?.rating}}
         <h4>Created On : </h4> {{movie?.createdAt | date: 'y/M/d'}}

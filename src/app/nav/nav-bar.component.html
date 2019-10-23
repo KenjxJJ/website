@@ -11,7 +11,7 @@
           </li>
           <li class="my_fav">
            <a [routerLink]="['/myFav']"  routerLinkActive ="active"
-           [routerLinkActiveOptions] ="{exact:active}">Favourites</a>
+           [routerLinkActiveOptions] ="{ active : true }">Favourites</a>
           </li>
       </ul>
       <form id="searchForm" (ngSubmit)='searchMovies(searchTerm)' class="navbar-form
@@ -25,7 +25,7 @@
   </nav>
 
 
-<simple-modal elementId='searchResults' title="Search Results">
+<simple-modal closeOnBodyClick="false" elementId='searchResults' title="Search Results">
   <div class="list-group">
     <a class="list-group-item" *ngFor='let movie of foundMovies'
       [routerLink]="['/movie', movie.objectId]">
