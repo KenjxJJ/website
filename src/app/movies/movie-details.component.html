@@ -1,31 +1,33 @@
 <div class="container">
     <div class="row">
-      <div class="col-md-11">
-        <h2 style="font-size: 120%">{{movie?.title | uppercase }}</h2>
+      <div class="col-md-12">
+        <h2 style="font-size: 150%">{{movie?.title | uppercase }}</h2>
+        <div class="image-sizing">
         <img [src]="movie?.image?.url" [alt]="movie?.image?.name"
         class="movie-image"/>
+        </div>
       </div>
     </div>
 
     <div class="row">
       <div class="col-md-6">
-        <h4>Release Year:</h4> {{movie?.releaseYear}}
-        <h4>Genre:</h4>
+        <h4>Release Year :</h4> {{movie?.releaseYear}}
+        <h4>Genre :</h4>
          <ul><li style="list-style-type: none" *ngFor="let genre of genres">{{movie?.genre}}</li></ul>
 
         <h4>Rating : </h4>{{movie?.rating}}
-        <h4>Created On: </h4> {{movie?.createdAt}}
-        <h4>Updated On: </h4> {{movie?.updateAt}}
+        <h4>Created On : </h4> {{movie?.createdAt | date: 'y/M/d'}}
+        <h4>Updated On : </h4> {{movie?.updatedAt  | date: 'y/M/d'}}
       </div>
-
-   <div class="col-md-6">
-      <h4>Plot</h4>
+       <div class="col-md-6">
+      <h4>Plot :</h4>
       <hr/>
       {{movie?.description}}
+       </div>
+    </div>
+    <div class="row">
+      <button class="btn btn-default" (click)="addToMyFav()" [routerLink]="['/home']">Add To Favourites</button>
     </div>
    </div>
 
-   <div class="row">
-     <button class="btn btn-default" (click)="addToMyFav()" [routerLink]="['/home']">Add To Favourites</button>
-  </div>
-</div>
+
