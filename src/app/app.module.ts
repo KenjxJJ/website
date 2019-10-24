@@ -14,7 +14,7 @@ import { ModalTriggerDirective } from './common/modal-trigger.directive';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { MovieDetailsComponent } from './movies/movie-details.component';
-import { MovieResolver } from './movies/movie-list.resolver';
+import { MovieListResolver } from './movies/movie-list.resolver';
 import { FavMoviesComponent } from './movies/fav_movies/fav-movies.component';
 import { FavMovieService } from './movies/fav_movies/fav-movies.service';
 import { LikeMovieComponent } from './movies/like-movie.component';
@@ -22,6 +22,7 @@ import { StorageServiceModule } from 'angular-webstorage-service';
 import { SessionStorageFavouritesService } from './movies/shared/session-storage-favourites.service';
 import { Error404Component } from './errors/404-error.component';
 import { MovieRouteActivator } from './movies/movie-route-activator.service';
+import { MovieResolver } from './movies/shared/movie-resolver.service';
 
 
 const jQuery = window['$'];
@@ -56,7 +57,8 @@ const jQuery = window['$'];
         MovieResolver,
         FavMovieService,
         SessionStorageFavouritesService,
-        MovieRouteActivator
+        MovieRouteActivator,
+        MovieListResolver
     ],
   bootstrap: [MyNetflixAppComponent]
 })

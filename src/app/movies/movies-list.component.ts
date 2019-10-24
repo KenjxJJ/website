@@ -28,14 +28,13 @@ export class MoviesListComponent implements OnInit {
 
         const sessionsStored = this.sessionsStorageService.retriveFromSessionStorage() || 0;
         if ( sessionsStored.length > 0) {
-            console.log(sessionsStored.length);
+
             for (const key of Object.keys(sessionsStored)) {
                   if (
                     this.favMoviesService.showFavMoviesList().filter(
                        s => s.objectId !== sessionsStored[key].objectId)) {
-                        console.log(this.favMoviesService.showFavMoviesList());
                         this.favMoviesService.addFavMovie(sessionsStored[key].objectId);
-                        console.log(this.favMoviesService.showFavMoviesList());
+
                     }
                 }
              }
