@@ -1,13 +1,10 @@
 import { Injectable} from '@angular/core';
 import { IMovies } from './movies.model';
-import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class MoviesService {
 
-  constructor(private http: HttpClient) {}
-
-  getMovies() {
+   getMovies() {
       return moviesList;
     }
 
