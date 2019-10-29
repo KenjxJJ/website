@@ -26,7 +26,7 @@ export class MoviesListComponent implements OnInit {
    ngOnInit() {
         this.movies = this.moviesService.getMovies();
 
-        const sessionsStored = this.sessionsStorageService.retriveFromSessionStorage() || 0;
+        const sessionsStored = this.sessionsStorageService.retrieveFromSessionStorage() || 0;
         if ( sessionsStored.length > 0) {
 
             for (const key of Object.keys(sessionsStored)) {

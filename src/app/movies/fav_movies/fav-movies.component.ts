@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { MoviesService } from '../shared/movies.service';
 import { IMovies } from '../shared/movies.model';
 import { ActivatedRoute } from '@angular/router';

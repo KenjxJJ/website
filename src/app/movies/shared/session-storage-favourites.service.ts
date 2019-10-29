@@ -27,7 +27,7 @@ console.log(this.storage.get(STORAGE_KEY)
               || 'Session Storage is empty');
 }
 
-retriveFromSessionStorage() {
+retrieveFromSessionStorage() {
              return this.storage.get(STORAGE_KEY);
   }
 
