@@ -10,6 +10,7 @@ import { FavMovieService } from './fav_movies/fav-movies.service';
       <h1>Movies</h1>
      <hr>
      <div class="row">
+      <!-- Iterate through an array of objects to list one movie as a thumbnail -->
         <movie-thumbnail class='row' *ngFor="let movie of movies"
            [movieSelection]="movie"></movie-thumbnail>
       </div>
@@ -26,11 +27,15 @@ export class MoviesListComponent implements OnInit {
    ngOnInit() {
         this.movies = this.moviesService.getMovies();
 
+      //Implement retrieval from sessions storage to persist any likes of the movies selected
         const sessionsStored = this.sessionsStorageService.retrieveFromSessionStorage() || 0;
         if ( sessionsStored.length > 0) {
 
             for (const key of Object.keys(sessionsStored)) {
-                  if (
+                  if ( 
+                    
+                    //compare items from session storage with items from the favMoviesServiceList.
+                    
                     this.favMoviesService.showFavMoviesList().filter(
                        s => s.objectId !== sessionsStored[key].objectId)) {
                         this.favMoviesService.addFavMovie(sessionsStored[key].objectId);
