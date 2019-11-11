@@ -34,7 +34,8 @@ export class MoviesListComponent implements OnInit {
             for (const key of Object.keys(sessionsStored)) {
                   if ( 
                     
-                    //compare items from session storage with items from the favMoviesServiceList.
+                    //compare items from session storage with items from the favMoviesList Array.
+                    //and the movies based on id into the favMoviesList Array in the favMoviesService
                     
                     this.favMoviesService.showFavMoviesList().filter(
                        s => s.objectId !== sessionsStored[key].objectId)) {
