@@ -64,9 +64,12 @@ export class MovieDetailsComponent implements OnInit {
       this.id = this.route.snapshot.params['objectId'];
       })
     }
+  //click to add to favourite
     addToMyFav() {
      this.favMoviesService.addFavMovie(this.id);
     }
+  //function to check the state of the particular movie if it is liked.
+  //Checks if the particular movie is in the list of the favourites.
     userHasClicked(id){
       this.favMoviesService.userHasLiked(id);
     }
