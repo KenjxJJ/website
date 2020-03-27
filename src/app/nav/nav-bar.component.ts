@@ -10,13 +10,11 @@ import { MoviesService } from '../movies/shared/movies.service';
             flex-direction : unset;
             width: 100%;
             }
-
+           
             ul li {
-              float : left;
-               margin-right : 10px;
-               color : blue;
-               text-align: center;
-               padding: 15px;
+              color : blue;
+              text-align: center;
+              padding: 10px;
             }
              a: hover,
              a: link {
