@@ -51,6 +51,7 @@ export class NavBarComponent {
 
         constructor(private moviesService: MoviesService) {}
 
+        //function searchMovies() that use an objectId to search possible movies with a string of atleast one length
         searchMovies(searchTerm) {
           this.foundMovies = this.moviesService.searchMovies(searchTerm);
 

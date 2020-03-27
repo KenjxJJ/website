@@ -11,6 +11,7 @@ export class MovieRouteActivator implements CanActivate{
                private router: Router ) {
  }
 
+  //Activate route on empty or unknown routed parameter to return to 404 Error Component
 canActivate(route: ActivatedRouteSnapshot) {
   const movieExits = !!this.moviesService.getMovie(route.params['objectId'])
 
