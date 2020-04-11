@@ -1,4 +1,4 @@
-import {Directive, OnInit, ElementRef, Inject, Input}   from '@angular/core';
+import {Directive, OnInit, ElementRef, Inject, Input} from '@angular/core';
 import { JQ_TOKEN } from './jquery.service';
 
 @Directive({
