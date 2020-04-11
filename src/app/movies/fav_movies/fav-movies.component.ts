@@ -8,6 +8,9 @@ import { FavMovieService } from './fav-movies.service';
       selector: 'myfav',
      templateUrl: './fav-movies.component.html',
      styles: [`
+          .container {
+             max-width: 80%;
+          }
           h3, h4{
             font-size: 130%;
           }
@@ -16,7 +19,10 @@ import { FavMovieService } from './fav-movies.service';
           color: white;
           width: 100%;
           height: auto;
-     }
+        }
+        img {
+           width: 100%;
+        }
 
      button.btn {
       background-color: rgba(200, 67, 20, 0.7);

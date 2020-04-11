@@ -1,10 +1,6 @@
-<nav class="navbar navbar-default ">
+<nav class="navbar navbar-default">
     <div class="container-fluid row">
-      <div class="navbar-header col-md-3">
-        <a class="navbar-brand" >My Netflix Mini</a>
-      </div>
-
-      <ul class="nav navbar-nav col-md-4">
+     <ul class="nav navbar-nav col-sm-12">
          <li>
             <a [routerLink]="['/home']"
              routerLinkActive ="active">Home</a>
@@ -15,7 +11,7 @@
           </li>
       </ul>
       <form id="searchForm" (ngSubmit)='searchMovies(searchTerm)' class="navbar-form
-        navbar-right col-md-5"  >
+        navbar-right col-sm-12 col-md-6"  >
         <input [(ngModel)]="searchTerm" name="searchTerm" type="text" class="form-control" placeholder="Search Movies Here" />
               <button class="btn btn-default" modal-trigger='searchResults'>
             Search

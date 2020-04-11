@@ -6,16 +6,10 @@ import { MoviesService } from '../movies/shared/movies.service';
       selector: 'nav-bar',
       templateUrl: './nav-bar.component.html',
       styles: [`
-          .navbar-nav{
-            flex-direction : unset;
-            width: 100%;
-            }
-           
             ul li {
               color : blue;
               text-align: center;
-              padding: 10px;
-            }
+             }
              a: hover,
              a: link {
               text-decoration : none;
@@ -25,12 +19,20 @@ import { MoviesService } from '../movies/shared/movies.service';
                   text-decoration : none;
 
             }
+            li {
+              display: inline-block;
+              padding: 0 5px 0 5px;
+              float: left;
+            }
 
             form > input {
                 width: 55%;
                 float:left;
                 margin-right: 0px;
                 min-width: 150px;
+            }
+            form {
+              margin: 5px auto;
             }
 
             button {
@@ -42,6 +44,13 @@ import { MoviesService } from '../movies/shared/movies.service';
             }
             :hover {
                color : blue;
+            }
+
+            @media all and (min-width: 400px){
+
+              li {
+                display: inline;
+              }
             }
       `]})
 

@@ -5,11 +5,11 @@ import { Input, Output, Component, EventEmitter } from '@angular/core';
   selector: 'movie-like',
   template: `
   <div class="likeWidgetContainer pointable" (click)="onClick()">
-   <!-- Create a heart like widget that turns red on selecting 
+   <!-- Create a heart like widget that turns red on selecting
     a particular movie as a favourite -->
     <div class="likeWidget">
         <div class="likeButton">
-        <i class="fa fa-heart fa-3x" [style.color]='iconColor'></i>
+        <i class="fa fa-heart fa-2x" [style.color]='iconColor'></i>
        </div>
     <div class="badge badge-inverse likeCount">
         <div *ngIf='iconColor=="white"'>Click to add to
@@ -22,7 +22,7 @@ import { Input, Output, Component, EventEmitter } from '@angular/core';
 })
 
 export class LikeMovieComponent {
-  //input liked directive from the parent (movie-thumbnail.component.ts) and 
+  //input liked directive from the parent (movie-thumbnail.component.ts) and
   //set on colot values red or white
    @Input() set liked(val) {
          this.iconColor = val ? 'red' : 'white';

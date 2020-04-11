@@ -25,5 +25,9 @@ export  const appRoutes: Routes = [
 {path: '404', component: Error404Component },
 {
     path: '', redirectTo: '/home', pathMatch: 'full'
+ },
+ {
+    path: '**', redirectTo: '/home', pathMatch: 'full'
  }
+
 ];

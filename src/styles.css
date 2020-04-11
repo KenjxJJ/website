@@ -33,3 +33,6 @@ button {
 .toast-warning {
   background-color: #f89406;
 }
+img {
+  width: 100%;
+}
