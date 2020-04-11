@@ -29,7 +29,7 @@
               "node_modules/font-awesome/css/font-awesome.min.css"
               ],
             "scripts": [
-             "node_modules/jQuery/dist/jquery.min.js",
+             "src/assets/js/jquery.min.js",
              "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
