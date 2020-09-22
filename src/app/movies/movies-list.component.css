@@ -22,7 +22,7 @@ span#year,
     width: auto;
     height: 60px;
     padding: 0.34rem;
-    margin: auto -3px;
+    margin: auto -2px;
     color: inherit;
 }
 
@@ -34,7 +34,7 @@ span#year,
     z-index: 5;
     line-height: 1;
     background-color: orangered;
-    color: #fff;
+    color: rgb(255, 251, 251);
 }
 
 .display_movies {
