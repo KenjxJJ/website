@@ -15,11 +15,12 @@ import { FavMovieService } from './fav_movies/fav-movies.service';
         }
 
         button.btn {
-           background-color: rgba(177, 67, 20, 0.7);
+           background-color: orangered;
            color: white;
-           margin: 2px;
-           font-size: 12px;
-           height: 20px;
+           margin: .4rem .65rem;
+           padding: .35rem .7rem;
+           font-size: 0.89rem;
+           width: 120px;
         }
         @media ( max-width: 450px){
           .container{
