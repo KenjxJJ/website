@@ -11,8 +11,11 @@ export class FavMovieService {
   constructor(private moviesService: MoviesService) { }
 
   addFavMovie(id: string) {
+    if(this.userHasLiked(id) === false){
     this.myFavMovie = this.moviesService.getMovie(id);
     myFavMoviesList.push(this.myFavMovie);
+    }
+    return;
   }
   showFavMoviesList(): IMovies[] {
     return myFavMoviesList;
