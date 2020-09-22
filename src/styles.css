@@ -1,38 +1,76 @@
 /* You can add global styles to this file, and also import other style files */
 
-.hoverwell:hover {
-  background-color: #485563;
-  cursor: pointer;
+body {
+    min-width: 410px;
+    background-color: rgb(67, 67, 67) !important;
+    overflow-x: hidden;
 }
 
 .container {
-  padding-top: 10px;
+    padding: 0;
+    overflow-x: hidden !important;
 }
 
-.pointable {
-  cursor: pointer;
+h1,
+h2,
+h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: .64rem 0;
+}
+
+h1 {
+    font-size: 4.5rem !important;
+    color: #e82a0d;
+}
+
+p {
+    margin-top: .3rem !important;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+}
+
+span {
+    font-size: 1rem;
+}
+
+span:not(.genreList) {
+    font-weight: 600 !important;
+}
+
+.genreList {
+    padding-right: .4rem;
 }
 
 button {
-  color: #555;
+    color: #555;
+    min-width: 64px;
 }
 
 [hidden] {
-  display: none !important;
+    display: none !important;
 }
 
-.toast-success {
-  background-color: #51a351;
+img:not(#header_img) {
+    width: 100%;
+    min-height: 35vh;
+    max-width: 320px;
 }
-.toast-error {
-  background-color: #bd362f;
+
+.movie_plot {
+    font-size: 1.5rem;
 }
-.toast-info {
-  background-color: #2f96b4;
+
+@media screen and (min-width: 767px) {
+    .movie_detail_1,
+    .favourite .one {
+        align-items: center;
+    }
 }
-.toast-warning {
-  background-color: #f89406;
-}
-img {
-  width: 100%;
+
+@media all and (min-width: 985px) {
+    .container {
+        margin: 0 auto;
+        max-width: 780px !important;
+    }
 }

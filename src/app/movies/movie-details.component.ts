@@ -7,20 +7,13 @@ import { FavMovieService } from './fav_movies/fav-movies.service';
 @Component({
       templateUrl: './movie-details.component.html',
       styles : [`
-      * {
-        box-sizing: unset;
-       }
-         .container {
-            background-color : rgb(67,67,67);
+        .container {
             color : white;
-            min-width: 600px;
-            width: 100%;
+            padding : 1.3rem 1.1rem;
+            font-size: 0.97rem;
+            overflow: hidden;
         }
 
-        ul li{
-           padding-left: -7px;
-
-        }
         button.btn {
            background-color: rgba(177, 67, 20, 0.7);
            color: white;
@@ -28,24 +21,17 @@ import { FavMovieService } from './fav_movies/fav-movies.service';
            font-size: 12px;
            height: 20px;
         }
-         div {
-            float: left;
-            padding-right: 10px;
-         }
-        @media screen and ( max-width: 600px ) {
-            img {
-             width:100%;
-             float: left:
-             margin-right: 10px;
+        @media ( max-width: 450px){
+          .container{
+            text-align:center;
+          }
+          img {
+            width:100%;
+            display:block;
+            margin: auto;
            }
         }
-        @media screen and (min-width: 601px){
-          img {
-            width:90%;
-            float: left:
-            margin-right: 10px;
-          }
-        }
+
          `]
 })
 

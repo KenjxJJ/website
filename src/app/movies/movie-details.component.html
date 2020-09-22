@@ -1,34 +1,43 @@
 <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h2 style="font-size: 150%">{{movie?.title | uppercase }}</h2>
-        <div class="image-sizing">
-        <img [src]="movie?.image?.url" [alt]="movie?.image?.name" 
-        class="movie-image"/>
+    <div class="row movie_detail_1">
+        <div class="col-md-6">
+            <h2 style="font-size: 150%">{{movie?.title | uppercase }}</h2>
+            <div class="image-sizing">
+                <img [src]="movie?.image?.url" [alt]="movie?.image?.name" class="movie-image" />
+            </div>
         </div>
-      </div>
+        <div class="col-md-6 highlight">
+            <p>
+                <span>Release Year</span> : {{movie?.releaseYear}}
+            </p>
+            <p>
+                <span>Genre</span> :
+                <span class="genreList" *ngFor="let genre of movie.genre">{{genre}}</span>
+            </p>
+            <p>
+                <span>Rating</span> : {{movie?.rating}}
+            </p>
+            <p>
+                <span>Created On</span> : {{movie?.createdAt | date: 'y/M/d'}}
+            </p>
+            <p>
+                <span>Updated On</span> : {{movie?.updatedAt | date: 'y/M/d'}}
+            </p>
+        </div>
     </div>
 
     <div class="row">
-      <div class="col-md-6">
-        <h4>Release Year :</h4> {{movie?.releaseYear}}
-        <h4>Genre :</h4>
-         <ul><li style="list-style-type: none" *ngFor="let genre of movie.genre">{{genre}}</li></ul>
+        <div class="col-sm-12 col-md-12">
+            <p>
+                <span class="movie_plot"> Plot </span>
+            </p>
+            <hr>
+            <p>{{movie?.description}}</p>
 
-        <h4>Rating : </h4>{{movie?.rating}}
-        <h4>Created On : </h4> {{movie?.createdAt | date: 'y/M/d'}}
-        <h4>Updated On : </h4> {{movie?.updatedAt  | date: 'y/M/d'}}
-      </div>
-       <div class="col-md-6">
-      <h4>Plot :</h4>
-      <hr/>
-      {{movie?.description}}
-       </div>
+        </div>
     </div>
     <div class="row">
-      <!-- <button class="btn btn-default" *ngIf="!!userHasClicked(movie.objectId)"
+        <!-- <button class="btn btn-default" *ngIf="!!userHasClicked(movie.objectId)"
       (click)="addToMyFav()" [routerLink]="['/home']">Add To Favourites</button> -->
     </div>
-   </div>
- cd
-
+</div>

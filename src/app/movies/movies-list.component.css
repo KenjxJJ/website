@@ -1,12 +1,79 @@
-div {
-   padding: auto 20px;
-   max-width: 100%;
+.movie_list {
+    width: 100%;
+    overflow: hidden;
 }
 
-h1, h2, h3{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2em;
-    font-weight: 600;
-    padding-left: 20px;
+.text {
+    padding-top: 4.5rem;
+    padding-left: .7rem;
+    padding-right: .7rem;
+    box-sizing: content-box;
+}
 
-  }
+h1 {
+    padding: 0px 0px;
+    margin-bottom: 0px;
+}
+
+span#year,
+#colorise {
+    font-family: inherit;
+    font-size: 2.3rem;
+    width: auto;
+    height: 60px;
+    padding: 0.34rem;
+    margin: auto -3px;
+    color: inherit;
+}
+
+#year {
+    line-height: 6.5rem;
+}
+
+#colorise {
+    z-index: 5;
+    line-height: 1;
+    background-color: orangered;
+    color: #fff;
+}
+
+.display_movies {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow-x: scroll;
+    /* overflow-y: hidden; */
+    width: 100%;
+    margin-bottom: -15px;
+    padding-bottom: 5px;
+}
+
+h1,
+p {
+    z-index: 3;
+}
+
+p {
+    padding: 0.35rem .23rem;
+    margin: 1.56rem 0;
+}
+
+footer {
+    margin: 5.1rem 0 .4rem;
+}
+
+footer p {
+    font-size: .67rem;
+    text-align: center;
+}
+
+footer>p.title {
+    font-size: 150%;
+    letter-spacing: 2px;
+}
+
+footer p:nth-child(2) {
+    border-top: 1px solid #333;
+    padding-top: 1rem;
+}

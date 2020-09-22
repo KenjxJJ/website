@@ -5,54 +5,8 @@ import { MoviesService } from '../movies/shared/movies.service';
 @Component({
       selector: 'nav-bar',
       templateUrl: './nav-bar.component.html',
-      styles: [`
-            ul li {
-              color : blue;
-              text-align: center;
-             }
-             a: hover,
-             a: link {
-              text-decoration : none;
-             }
-            li > a.active{
-                  color: #F97924;
-                  text-decoration : none;
-
-            }
-            li {
-              display: inline-block;
-              padding: 0 5px 0 5px;
-              float: left;
-            }
-
-            form > input {
-                width: 55%;
-                float:left;
-                margin-right: 0px;
-                min-width: 150px;
-            }
-            form {
-              margin: 5px auto;
-            }
-
-            button {
-               color :white;
-               background-color: orange;
-               height: 20%;
-               width: 25%;
-               min-width: 80px;
-            }
-            :hover {
-               color : blue;
-            }
-
-            @media all and (min-width: 400px){
-
-              li {
-                display: inline;
-              }
-            }
-      `]})
+      styleUrls: ['nav-bar.component.css']
+    })
 
 export class NavBarComponent {
         searchTerm = '';

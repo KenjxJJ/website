@@ -12,9 +12,9 @@ import { Input, Output, Component, EventEmitter } from '@angular/core';
         <i class="fa fa-heart fa-2x" [style.color]='iconColor'></i>
        </div>
     <div class="badge badge-inverse likeCount">
-        <div *ngIf='iconColor=="white"'>Click to add to
-        <br/>Favorites</div>
-        <div  *ngIf='iconColor=="red"'>Click to remove <br/> From Favourites</div>
+        <div *ngIf='iconColor=="white"'>Add to
+            Favourites</div>
+        <div  *ngIf='iconColor=="red"'>Remove</div>
       </div>
     </div>
     </div>`,
