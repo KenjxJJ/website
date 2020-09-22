@@ -5,7 +5,6 @@
 }
 
 body {
-    min-width: 410px;
     background-color: rgb(67, 67, 67) !important;
     overflow-x: hidden;
 }
