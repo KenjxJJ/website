@@ -46,17 +46,17 @@ export class MovieDetailsComponent implements OnInit {
 
     ngOnInit() {
       this.route.params.forEach( (params: Params) => {
-      this.movie = this.moviesService.getMovie(params['objectId']);
-      this.id = this.route.snapshot.params['objectId'];
-      })
+      this.movie = this.moviesService.getMovie(params.objectId);
+      this.id = this.route.snapshot.params.objectId;
+      });
     }
-  //click to add to favourite
+  // click to add to favourite
     addToMyFav() {
      this.favMoviesService.addFavMovie(this.id);
     }
-  //function to check the state of the particular movie if it is liked.
-  //Checks if the particular movie is in the list of the favourites.
-    userHasClicked(id){
+  // function to check the state of the particular movie if it is liked.
+  // Checks if the particular movie is in the list of the favourites.
+    userHasClicked(id) {
       this.favMoviesService.userHasLiked(id);
     }
 }

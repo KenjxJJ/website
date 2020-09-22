@@ -6,10 +6,13 @@ import { Directive, Input } from '@angular/core';
 import { By } from '@angular/platform-browser';
 
 @Directive({
+   // tslint:disable-next-line: directive-selector
    selector : '[routerLink]',
+   // tslint:disable-next-line: no-host-metadata-property
    host : { '(click)': 'onClick()'}
 })
 
+// tslint:disable-next-line: directive-class-suffix
 export class RouterLinkDirectiveStub {
       @Input ('routerLink') linkParams: any;
       navigatedTo: any = null;

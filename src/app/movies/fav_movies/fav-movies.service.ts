@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { IMovies } from '../shared/movies.model';
 import { MoviesService } from '../shared/movies.service';
 
+let myFavMoviesList: IMovies[] = [];
 @Injectable()
 export class FavMovieService {
   myFavMovie: IMovies;
@@ -25,4 +26,3 @@ export class FavMovieService {
     return myFavMoviesList.some(like => like.objectId === id);
   }
 }
-let myFavMoviesList: IMovies[] = [];

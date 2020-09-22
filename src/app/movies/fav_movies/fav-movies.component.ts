@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { FavMovieService } from './fav-movies.service';
 
 @Component({
+  // tslint:disable-next-line: component-selector
   selector: 'myfav',
   templateUrl: './fav-movies.component.html',
   styles: [`
@@ -49,10 +50,10 @@ export class FavMoviesComponent implements OnInit {
   genres: any[][];
 
   constructor(private moviesService: MoviesService, private route: ActivatedRoute
-    , private favMoviesService: FavMovieService) { }
+        ,     private favMoviesService: FavMovieService) { }
 
   ngOnInit() {
-
+    // tslint:disable-next-line: no-string-literal
     this.id = this.route.params['objectId'];
     this.myFavMoviesList = this.favMoviesService.showFavMoviesList();
     this.genres = this.moviesService.getMovieGenre(this.id);

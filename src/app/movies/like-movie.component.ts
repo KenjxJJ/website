@@ -1,7 +1,8 @@
 import { Input, Output, Component, EventEmitter } from '@angular/core';
-//This like-movie.component.ts file is a small favourite widget for selecting a particular movie on interest.
+// This like-movie.component.ts file is a small favourite widget for selecting a particular movie on interest.
 
 @Component({
+  // tslint:disable-next-line: component-selector
   selector: 'movie-like',
   template: `
   <div class="likeWidgetContainer pointable" (click)="onClick()">
@@ -22,17 +23,17 @@ import { Input, Output, Component, EventEmitter } from '@angular/core';
 })
 
 export class LikeMovieComponent {
-  //input liked directive from the parent (movie-thumbnail.component.ts) and
-  //set on colot values red or white
+  // input liked directive from the parent (movie-thumbnail.component.ts) and
+  // set on color values red or white
    @Input() set liked(val) {
          this.iconColor = val ? 'red' : 'white';
    }
-  //Emitted event like that is bind in the movie-thumbnail.component.ts
+  // Emitted event like that is bind in the movie-thumbnail.component.ts
    @Output() like = new EventEmitter();
    iconColor: string;
 
-  //function invoke onClick to shows effects of turning red or white based on selection by mouse click
-  //outputs an empty object
+  // function invoke onClick to shows effects of turning red or white based on selection by mouse click
+  // outputs an empty object
    onClick(): void {
         this.like.emit({});
     }
