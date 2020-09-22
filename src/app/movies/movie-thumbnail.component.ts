@@ -4,6 +4,7 @@ import { FavMovieService } from './fav_movies/fav-movies.service';
 import { SessionStorageFavouritesService } from './shared/session-storage-favourites.service';
 
 @Component({
+  // tslint:disable-next-line: component-selector
   selector: 'movie-thumbnail',
   template: `
           <div class = "wrapper">
@@ -23,7 +24,6 @@ import { SessionStorageFavouritesService } from './shared/session-storage-favour
              .wrapper {
                width: 54vw;
                min-width: 270px;
-               height: 591px;
                border-radius: 4%;
                margin-left: 5px;
                display: flex;
@@ -47,12 +47,12 @@ import { SessionStorageFavouritesService } from './shared/session-storage-favour
              h2{
                 color: #ffdad4;
                 font-size: 1.42rem;
-                height: 9vh;
+                height: 2.5rem;
              }
              h3 {
                  color: #fff;
                  font-size: 1.1rem;
-                 margin-top: 1.4rem;
+                 margin-top: 1.2rem;
             }
              button {
                  font-size: 85%;
@@ -70,10 +70,10 @@ import { SessionStorageFavouritesService } from './shared/session-storage-favour
                 background-color: #e82a0d;
              }
              .movieLike {
-               display: flex;
+                 display: flex;
                  align-items: flex-start;
                  justify-content: center;
-                 margin: 0 auto;
+                 margin: 1.8rem auto;
             }
             @media all and (max-width: 320px){
               .wrapper > *{
@@ -96,7 +96,7 @@ export class MovieThumbnailComponent {
   newFavList: IMovies[];
 
   constructor(private favMoviesService: FavMovieService,
-    private sessionStorageService: SessionStorageFavouritesService) {
+              private sessionStorageService: SessionStorageFavouritesService) {
   }
 
 
