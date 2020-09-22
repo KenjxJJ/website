@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
+@-ms-viewport {
+    width: device-width;
+}
+
 body {
     min-width: 410px;
     background-color: rgb(67, 67, 67) !important;
