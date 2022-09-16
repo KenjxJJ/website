@@ -22,7 +22,7 @@
     "@angular/router": "~8.2.4",
     "@ng-bootstrap/ng-bootstrap": "^5.1.1",
     "angular-webstorage-service": "^1.0.2",
-    "bootstrap": "^4.3.1",
+    "bootstrap": "^3.4.1",
     "font-awesome": "^4.7.0",
     "glyphicons": "^0.2.0",
     "jQuery": "^1.7.4",
